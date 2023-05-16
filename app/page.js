@@ -1,5 +1,11 @@
+import ItemsSection from "@/components/Items/ItemsSection";
+
 const HomePage = () => {
-  return <div>Hello world!</div>;
+  return (
+    <main>
+      <ItemsSection />
+    </main>
+  );
 };
 
 export default HomePage;
