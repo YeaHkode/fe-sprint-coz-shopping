@@ -11,6 +11,7 @@ const StyledHeader = styled.header`
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
+  z-index: 10;
 `;
 
 const HeaderContainer = styled.div`
@@ -54,6 +55,7 @@ const MenuDropdown = styled.nav`
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
   border-radius: 1rem;
   right: -70%;
+  z-index: 20;
 `;
 
 const DropdownList = styled.ul`
