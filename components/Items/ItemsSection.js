@@ -2,6 +2,7 @@
 import ItemsList from "./ItemsList";
 import { useEffect, useState } from "react";
 import { getItems } from "@/lib/getItems";
+import Container from "@mui/material/Container";
 
 const ItemsSection = () => {
   const [items, setItems] = useState([]);
@@ -18,10 +19,10 @@ const ItemsSection = () => {
 
   return (
     <section>
-      <div>
+      <Container>
         <h3>상품 리스트</h3>
         <ItemsList items={items} />
-      </div>
+      </Container>
     </section>
   );
 };
