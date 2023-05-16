@@ -3,8 +3,9 @@ import ItemsList from "./ItemsList";
 import { useEffect, useState } from "react";
 import { getItems } from "@/lib/getItems";
 import Container from "@mui/material/Container";
+import { Typography } from "@mui/material";
 
-const ItemsSection = () => {
+const ItemsSection = ({ title }) => {
   const [items, setItems] = useState([]);
 
   // useEffect에서는 바로 async 사용 불가
@@ -20,7 +21,9 @@ const ItemsSection = () => {
   return (
     <section>
       <Container>
-        <h3>상품 리스트</h3>
+        <Typography component="h5" variant="h5" sx={{ fontWeight: 600, ml: 1 }}>
+          {title}
+        </Typography>
         <ItemsList items={items} />
       </Container>
     </section>

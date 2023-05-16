@@ -26,10 +26,14 @@ const Item = ({ item }) => {
 
   return (
     <Grid xs={3}>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia sx={{ height: 140 }} image={cardUrl} title={cardTitle} />
+      <Card>
+        <CardMedia
+          sx={{ aspectRatio: 4 / 3 }}
+          image={cardUrl}
+          title={cardTitle}
+        />
         <CardContent>
-          <Typography gutterBottom variant="subtitle2" component="div">
+          <Typography gutterBottom component="div" sx={{ fontWeight: 500 }}>
             {cardTitle}
           </Typography>
         </CardContent>
