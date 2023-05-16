@@ -1,7 +1,8 @@
 "use client";
+import FilterBar from "@/components/FilterBar";
 import ItemsList from "@/components/Items/ItemsList";
 import { getItems } from "@/lib/getItems";
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 
 const ProductListPage = () => {
@@ -20,9 +21,12 @@ const ProductListPage = () => {
 
   return (
     <main>
-      <Stack direction="column" spacing={2} sx={{ mt: 4, mb: 4 }}>
-        <ItemsList items={items} />
-      </Stack>
+      <Container>
+        <Stack direction="column" spacing={2} sx={{ mt: 4, mb: 4 }}>
+          <FilterBar />
+          <ItemsList items={items} />
+        </Stack>
+      </Container>
     </main>
   );
 };
