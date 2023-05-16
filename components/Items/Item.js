@@ -25,7 +25,7 @@ const Item = ({ item }) => {
   const cardUrl = type === "Brand" ? brand_image_url : image_url;
 
   return (
-    <Grid xs={3}>
+    <Grid xs={3} component="li">
       <Card>
         <CardMedia
           sx={{ aspectRatio: 4 / 3 }}
